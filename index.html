@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員臉部辨識系統</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>會員臉部辨識</h1>
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div class="info">
+            <p>會員姓名: <span id="name">未知</span></p>
+            <p>會員編號: <span id="member_id">未知</span></p>
+            <p>信心值: <span id="confidence">N/A</span></p>
+        </div>
+        <button onclick="switchToRegister()">新增會員</button>
+    </div>
+
+    <div class="container" id="register" style="display: none;">
+        <h1>新增會員</h1>
+        <video id="registerVideo" autoplay playsinline></video>
+        <canvas id="registerCanvas" style="display: none;"></canvas>
+        <input type="text" id="newMemberId" placeholder="會員編號">
+        <input type="text" id="newMemberName" placeholder="會員姓名">
+        <button onclick="captureAndRegister()">拍照並註冊</button>
+        <button onclick="switchToRecognize()">返回辨識</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
