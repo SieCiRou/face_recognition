@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>MVE員工打卡系統</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>員工臉部打卡</h1>
+    
+    <video id="video" autoplay playsinline></video>
+    <button id="captureButton">打卡辨識</button>
+    
+    <p>姓名: <span id="name">未知</span></p>
+
+    <h2>匯出打卡紀錄</h2>
+    <input type="date" id="startDate"> ~ <input type="date" id="endDate">
+    <button id="exportButton">匯出 Excel</button>
+
+    <script src="/app.js"></script>
+</body>
+</html>
